@@ -1,3 +1,4 @@
+//CHALLENGE NUMBER 3
 //bills = [124, 48, 268]
 let tipArr=[], totalArr=[]
 
