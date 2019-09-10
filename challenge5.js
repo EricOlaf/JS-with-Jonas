@@ -61,3 +61,21 @@ let markBills = {
 markBills.tipCalc()
 
 console.log(markBills.tips, markBills.totals)
+
+function tipper(arr){
+    total = 0;
+    for(let i = 0; i < arr.length; i++){
+        total += arr[i]
+    }
+    return(total/arr.length)
+}
+
+let johnAvg = tipper(johnBills.tips);
+let markAvg = tipper(markBills.tips);
+
+if(johnAvg > markAvg){
+    console.log("John is the higher tipper with " + johnAvg)
+}else{
+    console.log("Mark is the higher tipper with " + markAvg)
+}
+
