@@ -1,4 +1,4 @@
-console.log("hey suckers!!!")
+//CHALLENGE NUMBER 4
 
 let john = {
     name: "John Smith",
