@@ -1,4 +1,4 @@
-const x = 1;
+// const x = 1;
 
 // function myFunc(){
 //     console.log(x);
