@@ -10,8 +10,9 @@ const x = 1;
 
 // console.log(x[0])
 
-let boo;
+// let boo;
 
-if(boo){
-    console.log("boo is true")
-} else { console.log("boo is false") }
+// if(boo){
+//     console.log("boo is true")
+// } else { console.log("boo is false") }
+
