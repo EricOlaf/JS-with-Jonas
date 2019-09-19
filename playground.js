@@ -95,7 +95,9 @@ console.log(ageVar, objAge.age);
 
 // console.log(obj1.age, varAge)
 
-Lecture: Passing functions as arguments
+/////////////////////////////////////////
+// Lecture: Passing functions as arguments
+/////////////////////////////////////////
 
 var years = [1990, 1988, 1993, 2000];
 
@@ -105,5 +107,16 @@ function arrayCalc (arr, fn) {
         arrRes.push(fn(arr[i]))
     }
     return arrRes;
-
 }
+
+function calcAge(el) {
+    return(2019 - el)
+}
+
+console.log(arrayCalc(years, calcAge));
+
+function myFunc() {}
+
+
+
+
