@@ -194,43 +194,107 @@
 ////////////////////////////////////////////////////////////
 
 
-var obj1 = {
-    func1: function() {
-        return this
+// var obj1 = {
+//     func1: function() {
+//         return this
         
-    }
-}
+//     }
+// }
 
-console.log(obj1.func1())
+// console.log(obj1.func1())
 
 
-var john = {
-    name : "john",
-    yearOfBirth : 1988,
-    job : "programmer"
-}
+// var john = {
+//     name : "john",
+//     yearOfBirth : 1988,
+//     job : "programmer"
+// }
 
-var Person = function(name, yearOfBirth, job) {
-    this.name = name;
-    this.yearOfBirth = yearOfBirth;
-    this.job = job;
-}
+// var Person = function(name, yearOfBirth, job) {
+//     this.name = name;
+//     this.yearOfBirth = yearOfBirth;
+//     this.job = job;
+// }
 
-var eric = new Person("Eric", 1988, "Programmer")
+// var eric = new Person("Eric", 1988, "Programmer")
 //The above is called instantiation!
 //When we use the new kw a new empty object is created. The new kw as well makes it so the this kw is tied to the new empty object.
-console.log(eric);
+// console.log(eric);
 
 //To add a method onto the person constructor would be acceptable but if you want to save space in memory you should use a prototype on the constructor so that the method is stored once in code but can be accessed by all instances.
 
 // Inheritance is when we add things into the constructor's prototype prpoerty.
 
-Person.prototype.calculateAge = function() {
-    console.log(2019 - this.yearOfBirth);
-}
+// Person.prototype.calculateAge = function() {
+//     console.log(2019 - this.yearOfBirth);
+// }
 
 // Again what we did above is prototype inheritance which allows us to store info once on the prototype property of the constructor but lets all instances use the the method.
 
-Person.prototype.lastName = "Olaveson";
+// Person.prototype.lastName = "Olaveson";
 
-console.log(eric.lastName)
+// console.log(eric.lastName)
+
+////////////////////////////////////////////////////////////
+//CLOSURES
+////////////////////////////////////////////////////////////
+
+// function retire(retAge) {
+//     let a = " years left until retirement";
+//     return function(yearOfBirth) {
+//         var age = 2019 - yearOfBirth;
+//         console.log((retAge - age) + a);
+//     }
+// }
+
+// let usaRetire = retire(66)
+// let canadaRetire = retire(70)
+// usaRetire(1988)
+// canadaRetire(1993)
+
+// retire(60)(1988)
+
+//inner functions will always have access to the variables and parameters of the outer function.
+
+// function interviewQuestion(job) {
+//     return function(name) {
+//         if (job === "designer") {
+//             console.log(name + " can you please explain what UI/UX is?")
+//         } else if (job === "teacher") {
+//             console.log(name + ", what subject do you teach?")
+//         } else if (job === "programmer") {
+//             console.log(`Wow, ${name} I've always wanted to meet a programmer`)
+//         }else {
+//             console.log( "Hello " + name + " what do you do?" )
+//         }
+//     }
+// }
+
+// let programmerQuestion = interviewQuestion("programmer")
+// programmerQuestion("Eric")
+// interviewQuestion("teacher")("Jeri")
+
+//ERIC'S BANK
+
+function bankOfEric(initialBalance, name) {
+    let balance = initialBalance;
+    
+    return {
+        deposit: function(amount){
+            balance += amount;
+            console.log(`Hi ${name} you have $${balance} in your account`);
+        },
+        takeOut: function(amount) {
+            balance -= amount;
+            console.log(`Hi ${name} you have $${balance} in your account`);
+        }
+    }
+}
+
+
+let ericAccount = bankOfEric(5, "Eric");
+ericAccount.deposit(20)
+let abbyAccount = bankOfEric(10000000, "Abby")
+abbyAccount.takeOut(1)
+
+console.log(abbyAccount)
