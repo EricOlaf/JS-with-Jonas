@@ -72,14 +72,14 @@
 // object inheriting from a variable
 //They are different and show that when an obj inherits from a variable it apparently doesn't just point to it.
 
-var ageVar = 30;
+// var ageVar = 30;
 
-let objAge = {};
-objAge.age = ageVar;
+// let objAge = {};
+// objAge.age = ageVar;
 
-ageVar = 40;
+// ageVar = 40;
 
-console.log(ageVar, objAge.age);
+// console.log(ageVar, objAge.age);
 
 //variable inheriting from an object
 //shows that the variables store info and not just point
@@ -99,23 +99,73 @@ console.log(ageVar, objAge.age);
 // Lecture: Passing functions as arguments
 /////////////////////////////////////////
 
-var years = [1990, 1988, 1993, 2000];
+// var years = [1990, 1988, 1993, 2000, 2007];
 
-function arrayCalc (arr, fn) {
-    var arrRes = [];
-    for (let i = 0; i < arr.length; i++) {
-        arrRes.push(fn(arr[i]))
+// function arrayCalc (arr, fn) {
+//     var arrRes = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         arrRes.push(fn(arr[i]))
+//     }
+//     return arrRes;
+// }
+
+// function calcAge(el) {
+//     return(2019 - el)
+// }
+
+// let ages = arrayCalc(years, calcAge);
+// console.log(ages);
+
+
+// function isFullAge(el) {
+//     return el >= 21;
+// }
+
+// var fullAges = arrayCalc(ages, isFullAge)
+// console.log(fullAges)
+
+// function maxHeartRate(el) {
+//     if(el >= 18 && el <= 81) {
+//         return Math.round(206.9 - (0.67 * el)) 
+//     }else {
+//         return -1;
+//     }
+    
+// }
+
+// let rates = arrayCalc(ages, maxHeartRate);
+// console.log(ages)
+// console.log(rates)
+
+//////////////////////////////////////////////////
+// Lecture: Functions returning another function
+//////////////////////////////////////////////////
+
+function intQuestion(job) {
+    if (job === "designer") {
+        return function(name){
+            console.log(name + " can you please explain what UI/UX is?")
+        }
+    } else if (job === "teacher") {
+        return function(name){
+            console.log(name + ", what subject do you teach?")
+        }
+    } else {
+        return function(name){
+            console.log( "Hello " + name + " what do you do?" )
+        }
     }
-    return arrRes;
 }
 
-function calcAge(el) {
-    return(2019 - el)
-}
+let teacherQuestion =  intQuestion('teacher');
+teacherQuestion("Abby");
 
-console.log(arrayCalc(years, calcAge));
+let designerQuestion = intQuestion('designer');
+designerQuestion("Eric"); 
+designerQuestion("Brandon");
 
-function myFunc() {}
+intQuestion("nada")("Sean");
+//The above way is another way to call a function right after the wrapper function has been called.
 
 
 
