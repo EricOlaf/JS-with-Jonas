@@ -202,3 +202,35 @@ var obj1 = {
 }
 
 console.log(obj1.func1())
+
+
+var john = {
+    name : "john",
+    yearOfBirth : 1988,
+    job : "programmer"
+}
+
+var Person = function(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+}
+
+var eric = new Person("Eric", 1988, "Programmer")
+//The above is called instantiation!
+//When we use the new kw a new empty object is created. The new kw as well makes it so the this kw is tied to the new empty object.
+console.log(eric);
+
+//To add a method onto the person constructor would be acceptable but if you want to save space in memory you should use a prototype on the constructor so that the method is stored once in code but can be accessed by all instances.
+
+// Inheritance is when we add things into the constructor's prototype prpoerty.
+
+Person.prototype.calculateAge = function() {
+    console.log(2019 - this.yearOfBirth);
+}
+
+// Again what we did above is prototype inheritance which allows us to store info once on the prototype property of the constructor but lets all instances use the the method.
+
+Person.prototype.lastName = "Olaveson";
+
+console.log(eric.lastName)
