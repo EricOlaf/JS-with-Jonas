@@ -141,32 +141,51 @@
 // Lecture: Functions returning another function
 //////////////////////////////////////////////////
 
-function intQuestion(job) {
-    if (job === "designer") {
-        return function(name){
-            console.log(name + " can you please explain what UI/UX is?")
-        }
-    } else if (job === "teacher") {
-        return function(name){
-            console.log(name + ", what subject do you teach?")
-        }
-    } else {
-        return function(name){
-            console.log( "Hello " + name + " what do you do?" )
-        }
-    }
-}
+// function intQuestion(job) {
+//     if (job === "designer") {
+//         return function(name){
+//             console.log(name + " can you please explain what UI/UX is?")
+//         }
+//     } else if (job === "teacher") {
+//         return function(name){
+//             console.log(name + ", what subject do you teach?")
+//         }
+//     } else {
+//         return function(name){
+//             console.log( "Hello " + name + " what do you do?" )
+//         }
+//     }
+// }
 
-let teacherQuestion =  intQuestion('teacher');
-teacherQuestion("Abby");
+// let teacherQuestion =  intQuestion('teacher');
+// teacherQuestion("Abby");
 
-let designerQuestion = intQuestion('designer');
-designerQuestion("Eric"); 
-designerQuestion("Brandon");
+// let designerQuestion = intQuestion('designer');
+// designerQuestion("Eric"); 
+// designerQuestion("Brandon");
 
-intQuestion("nada")("Sean");
+// intQuestion("nada")("Sean");
 //The above way is another way to call a function right after the wrapper function has been called.
 
 
+//////////////////////////////////////////////////
+// Lecture: Immediately invoked function expression (IIFE)
+//////////////////////////////////////////////////
+//if score is greater than 5 it's a win, if less than 5 it's a loss.
 
+// function game() {
+//     var score = Math.random() * 10
+//     console.log(score >= 5)
+// }
+
+// game()
+
+//IIFE will make the above easier
+
+// (function () {
+//     var score = Math.random() * 10
+//     console.log(score >= 5)
+// })();
+
+//What's in () cannot be a statement, so essentially we trick the computer into thinking it's a function expression, otherwise a anonomyous function declaration would throw an error.
 
