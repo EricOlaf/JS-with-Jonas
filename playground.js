@@ -3,22 +3,34 @@
 //////////////////////////////
 
 // var x = 1;
-
+// //console.log('y = ' + y);
+// //error: y is not defined, shows that if we don't use var it doesn't get hoisted.
 // y = x + 2;
 // console.log('y = ' + y);
+// // y = 3
 
+// var z = 0;
 
 // let myFunc = () => {
+//     console.log('z = ' + z);
+//     // z = undefined, due to hoisting in the scope of this function.
 //     console.log('x = ' + x);
-//     y = x + 2;
+//     // x = 1, finds the parent x because x lower in this scope isn't set with var but rather changes the value of the global x.
+//     y = y + 3 + x;
 //     console.log('y = ' + y);
+//     //y = 7, this is due to y = 3 above and x = 1
 //     x = 5;
+//     var z = 10
 // }
 
 // myFunc();
 
-// console.log(y);
-// console.log(x);
+// console.log("y = " +y);
+// // y = 7
+// console.log('x = ' +x);
+// // x = 5
+// console.log('z = ' + z);
+// // z = 0
 
 
 // console.log(x[0])
@@ -32,9 +44,19 @@
 // if(boo){
 //     console.log("boo is true")
 // } else { console.log("boo is false") }
+// //logs "boo is false"
+
+// let foo = " ";
+// //NaN doesn't equal anything if using == or ===
+// //Null, undfined, 0, "", NaN are all false
+
+// if(foo){
+//     console.log("foo is true")
+// } else { console.log("foo is false") }
+// //logs "foo is true"
 
 //////////////////////////////
-//PARENTHESES
+//PARENTHESES QUESTION
 //////////////////////////////
 
 // function findPar(str) {
@@ -57,6 +79,31 @@
 
 // console.log(ans)
 
+
+// let str1 = "((()))", str2 = "(", str3 = "())", str4 ="))((", str5=")()"
+
+// function parFinder(str) {
+//     let parCounter = 0;
+//     let penalty = 0;
+//     for(let i = 0; i < str.length; i++){
+//         if(str[i] === "("){
+//             parCounter++;
+//         } else{
+//             parCounter--;
+//         } 
+//         if(parCounter < 0) {
+//             penalty++; 
+//             parCounter++;
+//         }
+//         console.log(parCounter)
+//     }
+//     console.log(`We need ${penalty + parCounter} more parentheses`)
+// }
+//  parFinder(str1)
+//  parFinder(str2)
+//  parFinder(str3)
+//  parFinder(str4)
+//  parFinder(str5)
 
 //object inherting from another object
 // var obj1 = {
@@ -364,7 +411,7 @@
 // }
 
 // console.log(arrayCalc(ages, isFullAge))
-//the above worked before I changes the isFullAge to have two parameters.
+//the above worked before I changes the isFullAge to have two parameters instead of just the one el.
 
 // var japanFullAge = arrayCalc(ages, isFullAge.bind(this, 20));
 // console.log(japanFullAge);
