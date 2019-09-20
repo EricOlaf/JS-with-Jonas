@@ -8,7 +8,7 @@ let john = {
        this.bmi = this.mass / this.height^2;
        console.log(`${this.name} has a BMI of ${this.bmi}`)
        return this.bmi
-       
+       //We are setting a bmi variable in the object with this function
     }
 }
 
@@ -21,6 +21,7 @@ let mark = {
     // }
 }
 mark.bmiFunc = john.bmiFunc;
+// This is how to inherit a method from another object. All possible because of the this kw and the fact that it's not set until the function it is called.
 let markBMI = mark.bmiFunc();
 let johnBMI = john.bmiFunc();
 
