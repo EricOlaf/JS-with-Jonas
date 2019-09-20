@@ -276,25 +276,95 @@
 
 //ERIC'S BANK
 
-function bankOfEric(initialBalance, name) {
-    let balance = initialBalance;
+// function bankOfEric(initialBalance, name) {
+//     let balance = initialBalance;
     
-    return {
-        deposit: function(amount){
-            balance += amount;
-            console.log(`Hi ${name} you have $${balance} in your account`);
-        },
-        takeOut: function(amount) {
-            balance -= amount;
-            console.log(`Hi ${name} you have $${balance} in your account`);
-        }
+//     return {
+//         deposit: function(amount){
+//             balance += amount;
+//             console.log(`Hi ${name} you have $${balance} in your account`);
+//         },
+//         takeOut: function(amount) {
+//             balance -= amount;
+//             console.log(`Hi ${name} you have $${balance} in your account`);
+//         }
+//     }
+// }
+
+
+// let ericAccount = bankOfEric(5, "Eric");
+// ericAccount.deposit(20)
+// let abbyAccount = bankOfEric(10000000, "Abby")
+// abbyAccount.takeOut(1)
+
+// console.log(abbyAccount)
+
+////////////////////////////////////////////////////////////
+//BIND, CALL, APPLY
+////////////////////////////////////////////////////////////
+
+// var john = {
+//     name: 'John',
+//     age: 29,
+//     job: "teacher",
+//     presentation: function(style, timeOfDay){
+//         if(style === "formal"){
+//             console.log(`Good ${timeOfDay}, ladies and gentlemen. I'm ${this.name}, I'm ${this.age}, and I am a ${this.job}.`)
+//         }else if(style === "friendly"){
+//             console.log(`What's good?! I'm ${this.name}, I'm ${this.age}, and I am a ${this.job}. I hope you're having a great ${timeOfDay}!`)
+//         }
+//     }
+// }
+
+// var emily = {
+//     name : "emily",
+//     age : 35,
+//     job : "programmer"
+// }
+
+// john.presentation("formal", "morning")
+
+// john.presentation.call(emily, 'friendly', 'afternoon')
+//The above is called method borrowing. We use it with the call method.
+
+// john.presentation.apply(emily, ['friendly', 'evening'])
+//This would not work in our case because our function is not expecting an array as the input.
+
+// let johnFriendly = john.presentation.bind(john, 'friendly')
+//Doesn't automatically call a function, instead it returns a function that binds the function to the first parameter. As well we can pass more parameters to preset the function. 
+
+//carrying is when we have a function based on another function but has some preset parameters.
+
+// johnFriendly('morning')
+
+// let emilyFormal = john.presentation.bind(emily, "formal")
+
+// emilyFormal("evening")
+
+let numsArr = [1990, 1988, 1999, 2000, 2005, 1959]
+
+function arrayCalc (arr, fn) {
+    var arrRes = [];
+    for (let i = 0; i < arr.length; i++) {
+        arrRes.push(fn(arr[i]))
     }
+    return arrRes;
 }
 
+function calcAge(el) {
+    return(2019 - el)
+}
 
-let ericAccount = bankOfEric(5, "Eric");
-ericAccount.deposit(20)
-let abbyAccount = bankOfEric(10000000, "Abby")
-abbyAccount.takeOut(1)
+let ages = arrayCalc(numsArr, calcAge);
+console.log(ages);
 
-console.log(abbyAccount)
+
+function isFullAge(limit, el) {
+    return el >= limit;
+}
+
+// console.log(arrayCalc(ages, isFullAge))
+//the above worked before I changes the isFullAge to have two parameters.
+
+var japanFullAge = arrayCalc(ages, isFullAge.bind(this, 20));
+console.log(japanFullAge);
