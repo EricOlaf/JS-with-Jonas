@@ -341,30 +341,30 @@
 
 // emilyFormal("evening")
 
-let numsArr = [1990, 1988, 1999, 2000, 2005, 1959]
+// let numsArr = [1990, 1988, 1999, 2000, 2005, 1959]
 
-function arrayCalc (arr, fn) {
-    var arrRes = [];
-    for (let i = 0; i < arr.length; i++) {
-        arrRes.push(fn(arr[i]))
-    }
-    return arrRes;
-}
+// function arrayCalc (arr, fn) {
+//     var arrRes = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         arrRes.push(fn(arr[i]))
+//     }
+//     return arrRes;
+// }
 
-function calcAge(el) {
-    return(2019 - el)
-}
+// function calcAge(el) {
+//     return(2019 - el)
+// }
 
-let ages = arrayCalc(numsArr, calcAge);
-console.log(ages);
+// let ages = arrayCalc(numsArr, calcAge);
+// console.log(ages);
 
 
-function isFullAge(limit, el) {
-    return el >= limit;
-}
+// function isFullAge(limit, el) {
+//     return el >= limit;
+// }
 
 // console.log(arrayCalc(ages, isFullAge))
 //the above worked before I changes the isFullAge to have two parameters.
 
-var japanFullAge = arrayCalc(ages, isFullAge.bind(this, 20));
-console.log(japanFullAge);
+// var japanFullAge = arrayCalc(ages, isFullAge.bind(this, 20));
+// console.log(japanFullAge);
