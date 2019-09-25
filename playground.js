@@ -497,3 +497,7 @@ var abby = Object.create(personProto,
 
 // var japanFullAge = arrayCalc(ages, isFullAge.bind(this, 20));
 // console.log(japanFullAge);
+
+let num = '8'
+
+console.log(typeof(+num))
