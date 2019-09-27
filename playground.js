@@ -83,6 +83,28 @@
 // let str1 = "((()))", str2 = "(", str3 = "())", str4 ="))((", str5=")()"
 
 // function parFinder(str) {
+//     let count = 0;
+//     let penalty = 0;
+
+//     for(let i = 0; i < str.length; i++) {
+//         if(str[i] === "("){
+//             count ++
+//         } else if (str[i] === ")") {
+//             count --
+//         } if(count < 0){
+//             penalty++;
+//             count++;
+//         }
+//     }
+//     console.log(penalty + count);
+// }
+
+
+
+
+
+
+// function parFinder(str) {
 //     let parCounter = 0;
 //     let penalty = 0;
 //     for(let i = 0; i < str.length; i++){
