@@ -484,7 +484,7 @@ var abby = Object.create(personProto,
 // let johnFriendly = john.presentation.bind(john, 'friendly')
 //Doesn't automatically call a function, instead it returns a function that binds the function to the first parameter. As well we can pass more parameters to preset the function. 
 
-//carrying is when we have a function based on another function but has some preset parameters.
+//carrying/currying is when we have a function based on another function but has some preset parameters.
 
 // johnFriendly('morning')
 
