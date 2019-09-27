@@ -498,6 +498,13 @@ var abby = Object.create(personProto,
 // var japanFullAge = arrayCalc(ages, isFullAge.bind(this, 20));
 // console.log(japanFullAge);
 
-let num = '8'
+// let num = '8'
 
-console.log(typeof(+num))
+// console.log(typeof(+num))
+
+
+// setTimeout(()=>{
+//     console.log("Hit inside the timeout")
+// }, 2000)
+
+// console.log("Hit outside")
