@@ -115,31 +115,44 @@
 // console.log(stackHeight3d(2))
 // console.log(stackHeight3d(24))
 
-function addLetters(...letters) {
+// function addLetters(...letters) {
 
-    let lettersArray = "abcdefghijklmnopqrstuvwxyz".split("");
-    let total = 0;
+//     let lettersArray = "abcdefghijklmnopqrstuvwxyz".split("");
+//     let total = 0;
     
-    if (letters.length < 1){return "z"};
+//     if (letters.length < 1){return "z"};
 
-    for( let i = 0; i < letters.length; i++ ){
-        total += lettersArray.indexOf(letters[i]) + 1;
-    }
+//     for( let i = 0; i < letters.length; i++ ){
+//         total += lettersArray.indexOf(letters[i]) + 1;
+//     }
 
-    console.log(total);
+//     console.log(total);
 
-    if(total < 26){
-        return lettersArray[total -1]
-    } else if(total % 26 === 0){
-        return "z"
-    } else{
-        return lettersArray[total % 26 -1]
-    }
+//     if(total < 26){
+//         return lettersArray[total -1]
+//     } else if(total % 26 === 0){
+//         return "z"
+//     } else{
+//         return lettersArray[total % 26 -1]
+//     }
 
-    return "not working";
+//     return "not working";
        
+// }
+
+// console.log(addLetters("a", "b"))
+// console.log(addLetters("a", "y"))
+// console.log(addLetters("b", "y"))
+
+let myFunc = (str) => {
+    let ans = ""
+    for(let i = 0; i < str.length; i++){
+        if(str[i] !== " "){
+            ans += str[i] 
+        }
+    }
+    return ans
 }
 
-console.log(addLetters("a", "b"))
-console.log(addLetters("a", "y"))
-console.log(addLetters("b", "y"))
+console.log(myFunc("a b 1 2"))
+console.log("ab12")
