@@ -62,28 +62,29 @@
 
 //   console.log(orderedCount("abracadabra"))
 
-function par(str){
-    let c, p;
-    c = 0;
-    p = 0;
+// function par(str){
+//     let c, p;
+//     c = 0;
+//     p = 0;
 
-    for(let i = 0; i < str.length; i++){
-        if(str[i] === "("){
-            c++;
-        }else if(str[i] === ")"){
-            c--;
-        }
-        if(c < 0){
-            p++;
-            c++;
-        }
-    }
-    return c+p
-}
+//     for(let i = 0; i < str.length; i++){
+//         if(str[i] === "("){
+//             c++;
+//         }else if(str[i] === ")"){
+//             c--;
+//         }
+//         if(c < 0){
+//             p++;
+//             c++;
+//         }
+//     }
+//     return c+p
+// }
 
-console.log(par("()"))
-console.log(par("(()"))
-console.log(par("())"))
-console.log(par(")"))
-console.log(par("("))
-console.log(par(")("))
+// console.log(par("()"))
+// console.log(par("(()"))
+// console.log(par("())"))
+// console.log(par(")"))
+// console.log(par("("))
+// console.log(par(")("))
+
