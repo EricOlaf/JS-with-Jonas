@@ -117,10 +117,29 @@
 
 function addLetters(...letters) {
 
-    let lettersArray = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]
+    let lettersArray = "abcdefghijklmnopqrstuvwxyz".split("");
+    let total = 0;
     
-    let total
-    
-     return letters.length < 1 ? "z" : null;
-       
+    if (letters.length < 1){return "z"};
+
+    for( let i = 0; i < letters.length; i++ ){
+        total += lettersArray.indexOf(letters[i]) + 1;
     }
+
+    console.log(total);
+
+    if(total < 26){
+        return lettersArray[total -1]
+    } else if(total % 26 === 0){
+        return "z"
+    } else{
+        return lettersArray[total % 26 -1]
+    }
+
+    return "not working";
+       
+}
+
+console.log(addLetters("a", "b"))
+console.log(addLetters("a", "y"))
+console.log(addLetters("b", "y"))
