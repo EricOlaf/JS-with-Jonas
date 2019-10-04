@@ -88,24 +88,21 @@
 // console.log(par("("))
 // console.log(par(")("))
 
-function strong(n) {
-    let x = n + "";
-    total = 0;
+// function strong(n) {
+//     let x = n + "";
+//     total = 0;
  
-    for(let i = 0; i < x.length; i++){
-        let single = parseInt(x[i]);
-        let singleTotal = 1;
-        for(let j = 1; j <= single; j++){
-            singleTotal *= j;
-        }
-        total += singleTotal;
-    }
-    console.log(n, total)
-    if(total === n){return "STRONG!!!!" }
-    else{ return "Not Strong !!" }
+//     for(let i = 0; i < x.length; i++){
+//         let single = parseInt(x[i]);
+//         let singleTotal = 1;
+//         for(let j = 1; j <= single; j++){
+//             singleTotal *= j;
+//         }
+//         total += singleTotal;
+//     }
+//     if(total === n){return "STRONG!!!!" }
+//     else{ return "Not Strong !!" }
+//   }
 
-    console.log(parseInt(x[1]));
-    //return "STRONG!!!!" ||  "Not Strong !!";
-  }
-
-  console.log(strong(145))
+//   console.log(strong(145))
+//   console.log(strong(14))
