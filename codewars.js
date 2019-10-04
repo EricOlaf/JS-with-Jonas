@@ -107,10 +107,20 @@
 //   console.log(strong(145))
 //   console.log(strong(14))
 
-function stackHeight3d(l) {
-    return l ? ((l - 1) * .8164965809277259375 + 1).toFixed(4) : 0;
-}
+// function stackHeight3d(l) {
+//     return l ? ((l - 1) * .8164965809277259375 + 1).toFixed(4) : 0;
+// }
 
-console.log(stackHeight3d(0))
-console.log(stackHeight3d(2))
-console.log(stackHeight3d(24))
+// console.log(stackHeight3d(0))
+// console.log(stackHeight3d(2))
+// console.log(stackHeight3d(24))
+
+function addLetters(...letters) {
+
+    let lettersArray = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]
+    
+    let total
+    
+     return letters.length < 1 ? "z" : null;
+       
+    }
