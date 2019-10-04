@@ -106,3 +106,11 @@
 
 //   console.log(strong(145))
 //   console.log(strong(14))
+
+function stackHeight3d(l) {
+    return l ? ((l - 1) * .8164965809277259375 + 1).toFixed(4) : 0;
+}
+
+console.log(stackHeight3d(0))
+console.log(stackHeight3d(2))
+console.log(stackHeight3d(24))
