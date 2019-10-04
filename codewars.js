@@ -88,3 +88,7 @@
 // console.log(par("("))
 // console.log(par(")("))
 
+function strong(n) {
+
+    return "STRONG!!!!" || "Not Strong !!" ;
+  }
