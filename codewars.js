@@ -144,15 +144,25 @@
 // console.log(addLetters("a", "y"))
 // console.log(addLetters("b", "y"))
 
-let myFunc = (str) => {
-    let ans = ""
-    for(let i = 0; i < str.length; i++){
-        if(str[i] !== " "){
-            ans += str[i] 
-        }
-    }
-    return ans
-}
+// ///////////////////
+// /*NEW PROBLEM*/
+// ///////////////////
 
-console.log(myFunc("a b 1 2"))
-console.log("ab12")
+// /*MY ANSWER*/
+
+// let noSpace = (str) => {
+//     let ans = ""
+//     for(let i = 0; i < str.length; i++){
+//         if(str[i] !== " "){
+//             ans += str[i] 
+//         }
+//     }
+//     return ans
+// }
+
+// console.log(noSpace("a b 1 2"))
+// console.log("ab12")
+
+// /*COOL ANSWER!!!*/
+
+// function noSpace(x){return x.split(' ').join('')}
