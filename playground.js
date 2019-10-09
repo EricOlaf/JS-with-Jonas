@@ -541,14 +541,15 @@ var abby = Object.create(personProto,
 //Checking for an empty object
 ////////////////////////////////////
 
-Object.prototype.isEmpty = function() {
-    for(var key in this) {
-        if(this.hasOwnProperty(key))
-            return false;
-    }
-    return true;
-}
+// Object.prototype.isEmpty = function() {
+//     for(var key in this) {
+//         if(this.hasOwnProperty(key))
+//             return false;
+//     }
+//     return true;
+// }
 
-let myObj = {}
+// let myObj = {}
 
-console.log(myObj.isEmpty())
+// console.log(myObj.isEmpty())
+
