@@ -166,3 +166,43 @@
 // /*COOL ANSWER!!!*/
 
 // function noSpace(x){return x.split(' ').join('')}
+
+
+// ///////////////////
+// /*NEW PROBLEM*/
+// ///////////////////
+
+
+// function calculate(str) {
+//     const newStr = str.split("")
+//     let sum = 0;
+//     let currentNum = 1;
+    
+//     newStr.forEach((s)=>{
+    
+//         if (isNaN(parseInt(s))){
+//             if( s === "p"){
+//                 currentNum = 1
+//             }
+//             if(s === "m"){
+//                 currentNum = -1
+//             }
+//         } else {
+//             sum += s * currentNum
+//         }
+//     })
+//     return sum;
+// }
+    
+//     console.log(calculate("1plus2plus3plus4"))
+
+ /*COOL ANSWER!!!*/
+
+ 
+//  function calculate(str) {
+//     return eval(str.split("plus").join("+").split("minus").join("-")).toString();
+//   }
+  
+//   console.log(calculate("1plus2plus3plus4"))
+
+//   console.log(eval("2+2"))

@@ -609,4 +609,9 @@ var abby = Object.create(personProto,
 
 // console.log(myFunc(-Infinity))
 
+////////////////////////////////////
+//How to copy an object
+////////////////////////////////////
+
+//let newObj = JSON.parse(JSON.stringify(obj));
 
