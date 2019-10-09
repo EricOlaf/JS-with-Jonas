@@ -11,7 +11,10 @@
 
 // var z = 0;
 
-// let myFunc = () => {
+
+
+
+// var myFunc = () => {
 //     console.log('z = ' + z);
 //     // z = undefined, due to hoisting in the scope of this function.
 //     console.log('x = ' + x);
@@ -553,3 +556,28 @@ var abby = Object.create(personProto,
 
 // console.log(myObj.isEmpty())
 
+////////////////////////////////////
+//How to use reduce on an object
+////////////////////////////////////
+
+// var initialValue = 0;
+// var sum = [{x: 1}, {x: 2}, {x: 3}].reduce(function (accumulator, currentValue) {
+//     return accumulator + currentValue.x;
+// },initialValue)
+
+// console.log(sum) // logs 6
+
+const food = {
+    good: {
+        fruit: {},
+        notFruit: {
+            good:{
+                pizza:["pepperoni", cheese = {y: "cheddar", w: "provolone"}]
+            },
+            bad:{}
+        }
+    },
+    bad:{}
+}
+
+console.log(food.good.notFruit.good.pizza[1].w)
