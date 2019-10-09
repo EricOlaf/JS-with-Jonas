@@ -531,3 +531,24 @@ var abby = Object.create(personProto,
 
 // console.log("Hit outside")
 
+// console.log(a, b, c)
+
+// var a = 1;
+// let b = 2;
+// const c = 3;
+
+////////////////////////////////////
+//Checking for an empty object
+////////////////////////////////////
+
+Object.prototype.isEmpty = function() {
+    for(var key in this) {
+        if(this.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
+
+let myObj = {}
+
+console.log(myObj.isEmpty())
