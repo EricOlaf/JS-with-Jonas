@@ -582,23 +582,31 @@ var abby = Object.create(personProto,
 
 // console.log(food.good.notFruit.good.pizza[1].w)
 
-function pen(){
-    let shh = 0;
-    return function(){
-        return shh++
-    }
-}
+// function pen(){
+//     let shh = 0;
+//     return function(){
+//         return shh++
+//     }
+// }
 
-let pen1 = pen()
-pen1()
-console.log(pen1())
+// let pen1 = pen()
+// pen1()
+// console.log(pen1())
 
 
-let pen2 = pen()
-pen2()
-pen2()
-pen2()
-pen2()
-console.log(pen2())
+// let pen2 = pen()
+// pen2()
+// pen2()
+// pen2()
+// pen2()
+// console.log(pen2())
 //Not sure why the console.log isn't counted in the numbers but it's not.
+
+// function myFunc(v){
+//     if(v){return true;}
+//     else{return false;}
+// }
+
+// console.log(myFunc(-Infinity))
+
 
