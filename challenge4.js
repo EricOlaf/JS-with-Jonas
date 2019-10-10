@@ -22,6 +22,7 @@ let mark = {
 }
 mark.bmiFunc = john.bmiFunc;
 // This is how to inherit a method from another object. All possible because of the this kw and the fact that it's not set until the function it is called.
+//This is using 'this' with implicit.
 let markBMI = mark.bmiFunc();
 let johnBMI = john.bmiFunc();
 
@@ -32,7 +33,7 @@ switch(true){
         console.log("John has the higer BMI of " + johnBMI)
         break
     case johnBMI < markBMI:
-        console.log("Mark has the hige rBMI of " + markBMI)
+        console.log("Mark has the higer BMI of " + markBMI)
         break
     default: console.log("They're both hosed!!!")
 }

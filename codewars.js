@@ -206,3 +206,7 @@
 //   console.log(calculate("1plus2plus3plus4"))
 
 //   console.log(eval("2+2"))
+
+//eval() is a global function in JavaScript that evaluates a specified string as JavaScript code and executes it.
+
+

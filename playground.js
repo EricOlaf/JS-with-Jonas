@@ -62,73 +62,31 @@
 //PARENTHESES QUESTION
 //////////////////////////////
 
-// function findPar(str) {
-//     let penalty = 0, braces = 0;
-
-//     for(let i = 0; i < str.length; i++) {
-//         if(str[i] === '(') {
-//             braces ++;
-//         } else if(str[i] === ')') {
-//             braces --;
-//         } if( braces < 0){
-//             penalty ++;
-//             braces ++;
-//         }
-//     }
-//     return(penalty + braces)
-// }
-
-// let ans = findPar("((((())()()")
-
-// console.log(ans)
+// let str1 = "((()))", str2 = "(", str3 = "())", str4 ="))((", str5=")()";
 
 
-// let str1 = "((()))", str2 = "(", str3 = "())", str4 ="))((", str5=")()"
-
-// function parFinder(str) {
-//     let count = 0;
+// const parFinder = (str) => {
 //     let penalty = 0;
-
-//     for(let i = 0; i < str.length; i++) {
-//         if(str[i] === "("){
-//             count ++
-//         } else if (str[i] === ")") {
-//             count --
-//         } if(count < 0){
-//             penalty++;
-//             count++;
-//         }
-//     }
-//     console.log(penalty + count);
-// }
-
-
-
-
-
-
-// function parFinder(str) {
-//     let parCounter = 0;
-//     let penalty = 0;
+//     let counter = 0;
 //     for(let i = 0; i < str.length; i++){
 //         if(str[i] === "("){
-//             parCounter++;
-//         } else{
-//             parCounter--;
-//         } 
-//         if(parCounter < 0) {
-//             penalty++; 
-//             parCounter++;
+//             counter++
+//         }else{
+//             counter--
 //         }
-//         console.log(parCounter)
+//         if(counter < 0){
+//             penalty++;
+//             counter++;
+//         }
 //     }
-//     console.log(`We need ${penalty + parCounter} more parentheses`)
+//     return penalty + counter;
 // }
-//  parFinder(str1)
-//  parFinder(str2)
-//  parFinder(str3)
-//  parFinder(str4)
-//  parFinder(str5)
+
+// console.log(parFinder(str1))
+// console.log(parFinder(str2))
+// console.log(parFinder(str3))
+// console.log(parFinder(str4))
+// console.log(parFinder(str5))
 
 //object inherting from another object
 // var obj1 = {
@@ -270,7 +228,8 @@
 //     func1: function() {
 //         return this
         
-//     }
+//     },
+//     car: "Subaru"
 // }
 
 // console.log(obj1.func1())
