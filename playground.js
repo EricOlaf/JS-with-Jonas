@@ -412,6 +412,21 @@ var abby = Object.create(personProto,
 
 // console.log(abbyAccount)
 
+
+function myFunc(){
+    let num = 8;
+    return function(){
+        num++
+        console.log(num)
+    }
+}
+
+let oneFunc = myFunc()
+oneFunc();
+oneFunc();
+let twoFunc = myFunc()
+twoFunc();
+
 ////////////////////////////////////////////////////////////
 //BIND, CALL, APPLY
 ////////////////////////////////////////////////////////////
