@@ -591,3 +591,10 @@ var abby = Object.create(personProto,
 
 //let newObj = JSON.parse(JSON.stringify(obj));
 
+////////////////////////////////////
+//ES6!!!!!!!
+////////////////////////////////////
+
+//  let and const, block scoping
+//  template literals `${}`
+//  
