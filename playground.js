@@ -604,4 +604,6 @@ var abby = Object.create(personProto,
 //  .repeat(3)
 //  Arrow functions const funcName = () => {}; Be carfeul putting them on objects because they won't be able to use the this keyword properly, they will use the default window context.
 //  Destructuring [val1, val2] = arrName, {val} = objName
-//
+//  Working wih arrays:
+//  Array.from(var); var code be a nodeList returned from a querySelectAll(). Turns the node list into an array.
+//  for (const el of arrName){}; In here we can use continue and break which we can't in .map or .forEach.
