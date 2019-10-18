@@ -413,19 +413,21 @@ var abby = Object.create(personProto,
 // console.log(abbyAccount)
 
 
-function myFunc(){
-    let num = 8;
-    return function(){
-        num++
-        console.log(num)
-    }
-}
+// function myFunc(){
+//     let num = 8;
+//     return function(){
+//         num++
+//         console.log(num)
+//     }
+// }
 
-let oneFunc = myFunc()
-oneFunc();
-oneFunc();
-let twoFunc = myFunc()
-twoFunc();
+// let oneFunc = myFunc()
+// oneFunc();
+// oneFunc();
+// let twoFunc = myFunc()
+// twoFunc();
+
+//WHen calling a function we are making a new snapshot of the function. Even the outer function variables.
 
 ////////////////////////////////////////////////////////////
 //BIND, CALL, APPLY
@@ -461,7 +463,7 @@ twoFunc();
 // let johnFriendly = john.presentation.bind(john, 'friendly')
 //Doesn't automatically call a function, instead it returns a function that binds the function to the first parameter. As well we can pass more parameters to preset the function. 
 
-//carrying/currying is when we have a function based on another function but has some preset parameters.
+//currying is when we have a function based on another function but has some preset parameters.
 
 // johnFriendly('morning')
 
