@@ -597,4 +597,11 @@ var abby = Object.create(personProto,
 
 //  let and const, block scoping
 //  template literals `${}`
-//  
+//  String Methods: 
+//  .startsWith()
+//  .endsWith()
+//  .includes()
+//  .repeat(3)
+//  Arrow functions const funcName = () => {}; Be carfeul putting them on objects because they won't be able to use the this keyword properly, they will use the default window context.
+//  Destructuring [val1, val2] = arrName, {val} = objName
+//
