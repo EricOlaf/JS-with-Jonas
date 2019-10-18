@@ -611,3 +611,35 @@ var abby = Object.create(personProto,
 //  arrName.find(el => el > 21); returns first element that meets the requirements.
 //  spread operator [...arr1, ...arr2, var1] spreads the contents of arrays out into another array.
 //  rest parameter function (...args){}; gathers up the numersous arguments that we get and puts them onto a args array.
+//  default parameters is where we set default values in the parameters for things that may or may not recieve values.
+//  Maps!!! More to come tomorrow on these beautiful associative arrays/ any type for a key and some value thingy. I really like the concept though.
+
+//const map1 = new Map([[1, "one"], [2, 'two']])
+// you cannot supply Map with an object as the main data structure because it isn't iterable.
+
+const map1 = new Map();
+
+map1.set(1, "one")
+map1.set(2, "two")
+
+console.log(map1)
+console.log("map size " + map1.size)
+
+for([key, value] of map1){
+    console.log(`key: ${key}, value: ${value}`)
+}
+
+map1.forEach((val, key)=>console.log(`key: ${key}, value: ${val}`));
+
+
+const mapEnt = map1.entries()
+console.log(mapEnt)
+
+for([key, value] of mapEnt){
+    console.log(`ObjIterator key: ${key}, value: ${value}`)
+}
+
+//NOT VALID: mapEnt.forEach((val, key)=>console.log(`ObjIterator key: ${key}, value: ${val}`));
+
+
+
