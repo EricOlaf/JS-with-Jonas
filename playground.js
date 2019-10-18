@@ -607,3 +607,7 @@ var abby = Object.create(personProto,
 //  Working wih arrays:
 //  Array.from(var); var code be a nodeList returned from a querySelectAll(). Turns the node list into an array.
 //  for (const el of arrName){}; In here we can use continue and break which we can't in .map or .forEach.
+//  arrName.findIndex(el => el === "correct"); returns the of the first element index that matches the criteria.
+//  arrName.find(el => el > 21); returns first element that meets the requirements.
+//  spread operator [...arr1, ...arr2, var1] spreads the contents of arrays out into another array.
+//  rest parameter function (...args){}; gathers up the numersous arguments that we get and puts them onto a args array.
