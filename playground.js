@@ -617,29 +617,28 @@ var abby = Object.create(personProto,
 //const map1 = new Map([[1, "one"], [2, 'two']])
 // you cannot supply Map with an object as the main data structure because it isn't iterable.
 
-const map1 = new Map();
+// const map1 = new Map();
 
-map1.set(1, "one")
-map1.set(2, "two")
+// map1.set(1, "one")
+// map1.set(2, "two")
 
-console.log(map1)
-console.log("map size " + map1.size)
+// console.log(map1)
+// console.log("map size " + map1.size)
 
-for([key, value] of map1){
-    console.log(`key: ${key}, value: ${value}`)
-}
+// for([key, value] of map1){
+//     console.log(`key: ${key}, value: ${value}`)
+// }
 
-map1.forEach((val, key)=>console.log(`key: ${key}, value: ${val}`));
+// map1.forEach((val, key)=>console.log(`key: ${key}, value: ${val}`));
 
 
-const mapEnt = map1.entries()
-console.log(mapEnt)
+// const mapEnt = map1.entries()
+// console.log(mapEnt)
 
-for([key, value] of mapEnt){
-    console.log(`ObjIterator key: ${key}, value: ${value}`)
-}
+// for([key, value] of mapEnt){
+//     console.log(`ObjIterator key: ${key}, value: ${value}`)
+// }
 
 //NOT VALID: mapEnt.forEach((val, key)=>console.log(`ObjIterator key: ${key}, value: ${val}`));
-
 
 
